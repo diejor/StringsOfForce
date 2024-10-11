@@ -15,6 +15,11 @@ public:
 	// Sets default values for this character's properties
 	AFirstScript();
 
+	UFUNCTION(BlueprintCallable, Category="Abilities")
+	void SpawnActor();
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ActorBPToSpawn;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

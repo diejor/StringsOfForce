@@ -32,3 +32,12 @@ void AFirstScript::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 }
 
+void AFirstScript::SpawnActor()
+{
+	UE_LOG(LogTemp, Warning, TEXT("SpawnActor called"));
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+	
+	GetWorld()->SpawnActor<AActor>(ActorBPToSpawn, GetActorTransform(), SpawnParams);
+}
+
