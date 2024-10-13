@@ -9,6 +9,7 @@ public class StringOfForces : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "StringOfForces" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
